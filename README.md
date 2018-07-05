@@ -8,11 +8,10 @@ Some patches to aria2. Remove connection limit and fix building on macOS.
 - Set default max connections to per server to 64 and remove the limit of 16 before
 - Set default minimum split size to 1M
 - Set default timeout to 30s
-- Change the minimum unit of piece length to 1k
+- Change the minimum unit of piece length to 1K
 - Set default retry times to 2
 - Set default split pieces to 128
-- Disable checking certificate by default
-
+- Disable checking certificates by default
 - Fix defination of `std::make_unique` to build on maxOS.
 
 ## Usage
@@ -40,7 +39,7 @@ For macOS users, please follow these steps:
 
 1. Install dependencies from [Homebrew](https://brew.sh). To use `gettext` binary, you also need to add it to `$PATH`.
 ```bash
-$ brew install autoconf automake libtools gettext pkg-config
+$ brew install autoconf automake libtool gettext pkg-config
 $ export PATH="/usr/local/opt/gettext/bin:$PATH"
 ```
 2. Configure and build
