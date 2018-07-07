@@ -1,4 +1,5 @@
 # aria2-patch
+[中文文档](https://www.hguandl.com/post/8f0b723a.html)
 
 ## Introduction
 Some patches to aria2. Remove connection limit and fix building on macOS.
@@ -16,7 +17,6 @@ Some patches to aria2. Remove connection limit and fix building on macOS.
 
 ## Usage
 ### Get the source code
-
 You can download from [releases](https://github.com/aria2/aria2/releases) or [git](https://github.com/aria2/aria2).
 
 ```bash
@@ -24,7 +24,6 @@ $ git clone https://github.com/aria2/aria2.git
 ```
 
 ### Apply the patches from this repo
-
 ```bash
 $ git clone https://github.com/hguandl/aria2-patch.git
 $ cd aria2
@@ -32,7 +31,6 @@ $ patch -p1 < ../aria2-patch/aria2-fast.patch
 ```
 
 ### Build
-
 For Linux users, just see [How to build](https://github.com/aria2/aria2#how-to-build).
 
 For macOS users, please follow these steps:
@@ -45,7 +43,7 @@ $ export PATH="/usr/local/opt/gettext/bin:$PATH"
 2. Configure and build
 ```bash
 $ autoreconf -i
-$ ARIA2_STATIC=yes CXXFLAGS="-std=c++14" ./configure --prefix=/usr/local
+$ ./configure ARIA2_STATIC=yes CXXFLAGS="-O2 -std=c++14" --prefix=/usr/local
 $ make install
 ```
 
